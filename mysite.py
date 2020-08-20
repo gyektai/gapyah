@@ -9,10 +9,10 @@ app.config['SECRET_KEY'] = '0c702f92f9d7843302720201f994eb10'
 def home():
     return render_template('home.html', title='GY for Gap Year')
 
-@app.route('/makepost')
+@app.route('/makepost', methods=['GET', 'POST'])
 def makepost():
 	form = PostForm()
-	return render_template('write.html', title='Make Post', form=form)
+	return render_template('write.html', form=form)
 
 
 if __name__ == '__main__':
