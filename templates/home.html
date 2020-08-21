@@ -1,15 +1,34 @@
 <html>
 <head>
-	<title></title>
+
+	{% if title %}
+		<title>{{ title }}</title>
+	{% else %}
+		<title>GY</title>
+	{% endif %}
 </head>
 <body>
 	<h1> Gideon's Gap Year </h1>
 	<p>This is the site that I'll be working on for my gap year (or semester — who knows what the world has in store?). I'll use it as a blog to post projects, give updates, and I'll make projects specifically for the site as I learn web development. I don't really intend on anyone paying attention. I want this log for myself. Let's see how far I'll go.</p>
-	<p>Past versions are available on my github. I look forward to seeing what I'll be able to make this year.</p> <a href="https://github.com/gyektai/gapyah/tree/master">github</a>
+	<p>Past versions are available on my github. I look forward to seeing what I'll be able to make this year.</p>
+	<a href="https://github.com/gyektai/gapyah/tree/master">github</a>
+
+	{% for post in posts %}
+		<h2>{{ post.title }}</h2>
+		<p>{{ post.content }}</p>
+	{% endfor %}
+
 	<h2>8/18 A humbling lesson</h2>
 	<p>I wanted to create an implementation of Dijkstra's algorithm for map routing, which I have done before, and it didn't go well. I dove straight into it, and wrote all of the code without running and checking anything. Of course that didn't go well. Of course. I knew that it wouldn't work well if I did it that way.</p>
 	<p>And I ignored it anyway.</p>
 	<p>So next time I'll properly write and test everythin. My code failed at the first line. I couldn't import from another file. I also didn't really know where I was headed most of the time, or what data structures I should be using. It was terrible, a mess, but a good lesson learned.</p>
 	<p>So I won't rush through things. So I won't be so ambitious straight away.</p>
+
+	<h2>8/19 A Step in the Right Direction</h2>
+	<p>After learning to not jump too far ahead yesterday, I made some simple progress today, opting to work on improving my site. So I created some necessary functionality. But I didn't get the function part done yet. Having worked through normal hiccups, I'm now able to load a page that has a few forms in it so that I will be able to write my posts directly on the site instead of editing the html file directly. I also created the database that I'll be using. The next step is to tie them together. That probably sounds easier than it is.</p>
+	<p>In other news I surfed Montauk today and it was beyond enjoyable. I was out by Big Rock and it was one of those rare times where I had no interest in being anywhere else. 10/10 surf day and I never had a wave be shoulder-high. Just my father and me, and it was great.</p>
+
+	<p></p>
+	<a href="{{ url_for('makepost') }}">Write a New Post</a>
 </body>
 </html>

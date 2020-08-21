@@ -4,5 +4,5 @@ from wtforms.validators	import DataRequired
 
 class PostForm(FlaskForm):
 	title = StringField('Title', validators=[DataRequired()])
-	blog_content = StringField('Write Your Entry', validators=[DataRequired()])
+	blog_writer = StringField('Write Your Entry', validators=[DataRequired()])
 	submit = SubmitField('Post Blog')
