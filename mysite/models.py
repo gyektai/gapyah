@@ -7,4 +7,4 @@ class Post(db.Model):
 	content = db.Column(db.Text, nullable=False)
 
 	def __repr__(self):
-		return f"Post('{self.title}', '{self.date_posted}', '{self.content}')"
+		return f"Post('{self.title}', '{self.date_posted}')"

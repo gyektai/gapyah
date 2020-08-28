@@ -1,24 +1,20 @@
-<html>
-<head>
-
-</head>
-<body>
+{% extends "layout.html" %}
+{% block content %}
 	<form method="POST" action="">
 		{{ form.hidden_tag() }}
-		<fieldset>
-			<legend>Write Now!</legend>
-			<div>
-				{{ form.title.label }}
-				{{ form.title }}
+		<fieldset class="form-group">
+			<legend class="border-bottom mb-4">Write Now!</legend>
+			<div class="form-group">
+				{{ form.title.label(class="form-control-label") }}
+				{{ form.title(class="form-control form-control-lg") }}
 			</div>
-			<div>
-				{{ form.blog_writer.label }}
-				{{ form.blog_writer }}
+			<div class="form-group">
+				{{ form.blog_writer.label(class="form-control-label") }}
+				{{ form.blog_writer(class="form-control form-control-lg") }}
 			</div>
 		</fieldset>
 		<div class="form-group">
 			{{ form.submit }}
 		</div>
 	</form>
-</body>
-</html>
+{% endblock content %}

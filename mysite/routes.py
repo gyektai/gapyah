@@ -1,5 +1,5 @@
 from flask import render_template, url_for, redirect
-from mysite import app
+from mysite import app, db
 from mysite.forms import PostForm
 from mysite.models import Post
 
@@ -19,3 +19,7 @@ def makepost():
 		db.session.commit()
 		return redirect(url_for('home'))
 	return render_template('write.html', form=form)
+
+@app.route('/layout')
+def layout():
+	return render_template('layout.html', title='GY Gap Year')
