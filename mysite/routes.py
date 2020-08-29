@@ -1,7 +1,7 @@
 from flask import render_template, url_for, redirect
 from mysite import app, db
-from mysite.forms import PostForm
-from mysite.models import Post
+from mysite.forms import PostForm, GuestForm
+from mysite.models import Post, Guest
 
 
 @app.route('/home')
@@ -31,3 +31,14 @@ def blog():
 @app.route('/projects')
 def projects():
 	return render_template('projects.html', title='GY Projects')
+
+@app.route('/guestbook', methods=['GET', 'POST'])
+def guestbook():
+	form = GuestForm()
+	if form.validate_on_submit():
+		guest = Guest(name=form.guest.data, message=form.message.data)
+		db.session.add(guest)
+		db.session.commit()
+		return redirect(url_for('guestbook'))
+	guests = Guest.query.all()
+	return render_template('guestbook.html', title='GY Guest Book', guests=guests, form=form)

@@ -8,3 +8,11 @@ class Post(db.Model):
 
 	def __repr__(self):
 		return f"Post('{self.title}', '{self.date_posted}')"
+
+class Guest(db.Model):
+	name = db.Column(db.String, nullable=False, primary_key=True)
+	message = db.Column(db.Text, nullable=True)
+	date_signed = db.Column(db.DateTime, nullable=False, default=datetime.utcnow)
+
+	def __repr__(self):
+		return f"Post('{self.name}', '{self.date_posted}')"
