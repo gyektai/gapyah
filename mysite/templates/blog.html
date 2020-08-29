@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+{% block content %}
+	<h1>A Chronicle of my Affairs</h1>
+
+	{% for post in posts[::-1] %}
+		<article class="media content-section">
+			<div class="media-body">
+				<h2>{{ post.date_posted.month }}/{{post.date_posted.day }} {{ post.title }}</h2>
+				<p>{{ post.content }}</p>
+			</div>
+	{% endfor %}
+	
+	<br>
+	<a href="{{ url_for('makepost') }}">Write a New Post</a>
+{% endblock content %}

@@ -7,8 +7,7 @@ from mysite.models import Post
 @app.route('/home')
 @app.route('/')
 def home():
-	posts = Post.query.all()
-	return render_template('home.html', title='GY for Gap Year', posts=posts)
+	return render_template('home.html', title='GY for Gap Year')
 
 @app.route('/makepost', methods=['GET', 'POST'])
 def makepost():
@@ -23,3 +22,12 @@ def makepost():
 @app.route('/layout')
 def layout():
 	return render_template('layout.html', title='GY Gap Year')
+
+@app.route('/blog')
+def blog():
+	posts = Post.query.all()
+	return render_template('blog.html', title='GY Blog', posts=posts)
+
+@app.route('/projects')
+def projects():
+	return render_template('projects.html', title='GY Projects')
