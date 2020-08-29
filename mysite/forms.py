@@ -10,3 +10,4 @@ class PostForm(FlaskForm):
 class GuestForm(FlaskForm):
 	guest = StringField('Sign Your Name', validators=[DataRequired(), Length(min=1, max=30)])
 	message = StringField('Leave a Message')
+	submit = SubmitField('Sign!')

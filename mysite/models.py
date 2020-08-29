@@ -15,4 +15,4 @@ class Guest(db.Model):
 	date_signed = db.Column(db.DateTime, nullable=False, default=datetime.utcnow)
 
 	def __repr__(self):
-		return f"Post('{self.name}', '{self.date_posted}')"
+		return f"Post('{self.name}', '{self.date_signed}')"

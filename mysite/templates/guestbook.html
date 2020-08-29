@@ -1,6 +1,20 @@
-{% extends layout.html %}
+{% extends "layout.html" %}
 {% block content %}
-	<h1>In the guestbook</h1>
+	{% for guest in guests[::-1] %}
+		<article class="media content-section">
+			<div class="media-body">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+							<h2>{{ guest.name }}</h2>
+						</div>
+						<div class="col-lg-9 col-md-9 col-sm-6 col-xs-12">
+							<p>{{ guest.message }}</p>
+						</div>
+					</div>
+				</div>
+			</div>
+	{% endfor %}
 	<form method="POST" action="">
 		{{ form.hidden_tag() }}
 		<fieldset class="form-group">
