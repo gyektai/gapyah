@@ -1,15 +1,14 @@
 {% extends "layout.html" %}
 {% block content %}
-	<h1>A Chronicle of my Affairs</h1>
-
-	{% for post in posts[::-1] %}
-		<article class="media">
-			<div class="media-body">
-				<p class="article-title">{{ post.date_posted.month }}/{{post.date_posted.day }} {{ post.title }}</p>
-				<p class="article-content">{{ post.content }}</p>
+	<div class="page-header">A Chronicle of my Affairs</div>
+	<div class="blog-page">
+		{% for post in posts[::-1] %}
+			<div class="blog-entry">
+				<p class="blog-title">{{ post.date_posted.month }}/{{post.date_posted.day }} {{ post.title }}</p>
+				<p class="blog-content">{{ post.content }}</p>
 			</div>
-	{% endfor %}
-	
+		{% endfor %}
+	</div>
 	<br>
 	<a href="{{ url_for('makepost') }}">Write a New Post</a>
 {% endblock content %}

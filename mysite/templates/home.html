@@ -1,7 +1,10 @@
 {% extends "layout.html" %}
 {% block content %}
-	<h1> Gideon's Gap Year </h1>
-	<p>This is the site that I'll be working on for my gap year (or semester — who knows what the world has in store?). I'll use it as a blog to post projects, give updates, and I'll make projects specifically for the site as I learn web development. I don't really intend on anyone paying attention. I want this log for myself. Let's see how far I'll go.</p>
-	<p>The code and past versions are available on my github. I look forward to seeing what I'll be able to make this year.</p>
-	<a href="https://github.com/gyektai/gapyah/tree/master">github</a>
+	<div class="page-header"> Gideon's Gap Year </div>
+	<p class="home">This is the site that I'll be working on for my gap year (or semester — who knows what the world has in store?). I'll use it as a blog to post projects, give updates, and I'll make projects specifically for the site as I learn web development. I don't really intend on anyone paying attention. I want this log for myself. Let's see how far I'll go.</p>
+	<p class="home">The code and past versions are available on my <a href="https://github.com/gyektai/gapyah/tree/master">github</a>. I look forward to seeing what I'll be able to make this year.</p>
+	<p class="home">If you'd like, sign the guest book and leave a message to let me know you visited!</p>
+	<a href="{{ url_for('guestbook') }}" class="btn btn-blue" role="button">Sign Guest Book</a>
+	<p style="padding-top:10px;" class="home">More exciting stuff is in store — trust me. I just have to learn the boring simple things first then I can kick ass.</p>
+	
 {% endblock content %}
