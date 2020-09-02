@@ -4,7 +4,26 @@ body {
 	padding-top: 70px;
 }
 
+.bg-ltgrey {
+	background-color: #cccccc;
+}
+
+.nav.navbar-nav li a {
+	color: #ffffff;
+	font-size: 14px;
+	margin-right: 1px;
+	margin-left: 1px;
+}
+
+.nav.navbar-nav li a:hover {
+	border-left: 1px solid #404040;
+	border-right: 1px solid #404040;
+	margin-right: 0px;
+	margin-left: 0px;
+}
+
 .page-header {
+	padding-left: 50px;
 	font-size: 42px;
 	color: #14141f;
 	/*font-weight: bold;*/
@@ -12,17 +31,25 @@ body {
 
 .blog-page {
 	border-radius: 4px;
-	background-color: #efeff5;
+	background-color: #ffffff;
+	padding-top: 6px;
 }
 
 .blog-entry {
 	padding-bottom: 7px;
 }
 
+.blog-date {
+	padding-left: 50px;
+	color: #46466d;
+  	font-size: 24px;
+  	font-family: "Times New Roman", Times, serif;
+  	padding-top: 0px;
+}
+
 .blog-title {
+	padding-left: 20px;
   	color: #46466d;
-  	border-radius: 4px;
-  	padding: 8px;
   	font-size: 24px;
   	font-family: "Times New Roman", Times, serif;
   	padding-top: 0px;
@@ -33,6 +60,12 @@ body {
 	padding-left: 30px;
 	padding-top: 5px;
 	font-family: "Times New Roman", Times, serif;
+	margin-bottom: -10px;
+}
+
+hr.solid {
+	width: 90%;
+	border-top: 1px solid #c2c2d6;
 }
 
 .home {

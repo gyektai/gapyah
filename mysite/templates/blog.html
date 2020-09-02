@@ -4,9 +4,10 @@
 	<div class="blog-page">
 		{% for post in posts[::-1] %}
 			<div class="blog-entry">
-				<p class="blog-title">{{ post.date_posted.month }}/{{post.date_posted.day }} {{ post.title }}</p>
+				<span class="blog-date">{{ post.date_posted.month }}/{{post.date_posted.day }}</span><span class="blog-title">{{ post.title }}</span>
 				<p class="blog-content">{{ post.content }}</p>
 			</div>
+			<hr class="solid">
 		{% endfor %}
 	</div>
 	<br>
