@@ -8,6 +8,10 @@ body {
 	background-color: #cccccc;
 }
 
+.txt-wt {
+	color: #ffffff;
+}
+
 .nav.navbar-nav li a {
 	color: #ffffff;
 	font-size: 14px;
@@ -80,4 +84,16 @@ hr.solid {
 }
 a.btn-blue:hover{
 	border-color: #333333;
+}
+
+.short {
+	width: 25%;
+}
+
+.pad-left {
+	padding-left: 40px;
+}
+
+.mr-right {
+	margin-right: 20px;
 }

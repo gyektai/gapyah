@@ -16,7 +16,7 @@ def makepost():
 		post = Post(title=form.title.data, content=form.blog_writer.data)
 		db.session.add(post)
 		db.session.commit()
-		return redirect(url_for('home'))
+		return redirect(url_for('blog'))
 	return render_template('write.html', form=form)
 
 @app.route('/layout')
