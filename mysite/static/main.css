@@ -20,10 +20,11 @@ body {
 }
 
 .nav.navbar-nav li a:hover {
-	border-left: 1px solid #404040;
-	border-right: 1px solid #404040;
+	border-left: 1px solid #8c8c8c;
+	border-right: 1px solid #8c8c8c;
 	margin-right: 0px;
 	margin-left: 0px;
+	background-color: #b3b3b3;
 }
 
 .page-header {
